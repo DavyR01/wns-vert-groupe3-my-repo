@@ -16,7 +16,9 @@ COPY . .
 
 EXPOSE 3000
 
-CMD pnpm run dev
+RUN pnpm run build
+CMD pnpm run start
+
 # CMD pnpm run start:host
 # CMD ["pnpm", "run", "dev"]
 # CMD pnpm run dev

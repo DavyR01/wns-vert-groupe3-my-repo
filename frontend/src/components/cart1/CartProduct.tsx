@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const CartProduct = ({ product, onRemove }: any) => {
   const handleRemove = () => {
     onRemove(product.id);
@@ -8,7 +10,7 @@ const CartProduct = ({ product, onRemove }: any) => {
   return (
     <div className="flex items-center justify-between border-b border-gray-200 py-4">
       <div className="flex items-center space-x-4">
-        <img
+        <Image
           src={product.picture[0]}
           alt={product.name}
           className="h-20 w-20 rounded-lg bg-white object-cover"

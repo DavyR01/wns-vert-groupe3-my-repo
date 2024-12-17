@@ -8,6 +8,7 @@ import { useUserDatesResearch } from "contexts/UserDatesResearchContext";
 import { PRODUCT_UNAVAILABLE_DATES } from "data/fakeData";
 import { DELETE_PRODUCT, UPDATE_PRODUCT } from "lib/graphql/mutations";
 import { GET_PRODUCTS, ProductType } from "lib/graphql/queries";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useState } from "react";
@@ -191,7 +192,7 @@ const ProductsList = () => {
                         ) : (
                           <div className="flex items-center">
                             <div className="flex-shrink-0">
-                              <img
+                              <Image
                                 className="h-16 w-16 rounded-full object-cover"
                                 width={100}
                                 height={100}

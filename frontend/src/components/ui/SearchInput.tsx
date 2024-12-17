@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const SearchInput = () => {
@@ -95,7 +96,7 @@ const SearchInput = () => {
                 >
                   <li className=" cursor-pointer p-2 text-black ">
                     <div className="flex items-center justify-start rounded-md bg-slate-200 p-2 hover:bg-indigo-300">
-                      <img
+                      <Image
                         src={product.picture[0]}
                         alt={"Image de " + product.name}
                         className="mr-6 h-12 w-12 rounded-md object-cover"

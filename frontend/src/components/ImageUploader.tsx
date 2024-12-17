@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState } from "react";
 
 type ImageUploaderProps = {
@@ -51,7 +52,7 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ setFiles }) => {
               index === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
             }`}
           >
-            <img
+            <Image
               src={previewUrl}
               alt={`Preview-${index}`}
               className={`h-${index === 0 ? "300" : "50"} w-${

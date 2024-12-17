@@ -37,7 +37,7 @@ const ProductDtsPresSection = () => {
               src={product.picture[0]}
               className="object-cover object-center"
             /> */}
-            <img
+            <Image
               sizes="80vw"
               alt={"Image de " + product.name}
               src={product.picture[0]}
@@ -53,7 +53,7 @@ const ProductDtsPresSection = () => {
                 alt={"Image de " + product.name}
                 className="object-cover object-center"
               /> */}
-              <img
+              <Image
                 sizes="40vw"
                 src={product.picture[1]}
                 alt={"Image de " + product.name}

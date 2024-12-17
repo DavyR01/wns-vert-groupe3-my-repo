@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Success = () => {
   return (
     <div className="mt-6 flex flex-col items-center justify-center">
       <h3 className="mb-4 text-4xl font-bold">Paiement Réussi 🎉 !</h3>
-      <img
+      <Image
         src="https://i.gifer.com/origin/5f/5fa2b63c40c70da800bf9e7e5195645e_w200.gif"
         alt="gif celebrate"
       />

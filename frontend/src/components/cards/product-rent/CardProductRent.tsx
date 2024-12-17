@@ -15,6 +15,7 @@ import { FaCartArrowDown } from "react-icons/fa6";
 
 import CategoryLink from "components/CategoryLink";
 import { UserContext } from "contexts/UserContext";
+import Image from "next/image";
 import CardProductRentAvailabilityViewer from "../../../components/cards/product-rent/CardProductRentAvailabilityViewer";
 
 
@@ -68,7 +69,7 @@ const CardProductRent = ({
                      alt={"Image de " + name}
                      className="h-full w-full object-cover object-center"
                   /> */}
-                  <img
+                  <Image
                      src={picture[0]}
                      alt={"Image de " + name}
                      className="h-full w-full object-cover object-center"

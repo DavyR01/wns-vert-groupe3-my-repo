@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import { useState } from "react";
 
 // Page de test à supprimer
@@ -43,9 +44,9 @@ const UploadPage = () => {
 
       {imageURL ? (
         <>
-          {console.log("image URL : ", imageURL)}
+          {/* {console.log("image URL : ", imageURL)} */}
           <br />
-          <img width={500} alt="uploadedImg" src={imageURL} />
+          <Image width={500} alt="uploadedImg" src={imageURL} />
           <br />
         </>
       ) : null}

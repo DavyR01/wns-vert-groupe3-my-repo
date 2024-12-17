@@ -13,6 +13,10 @@ COPY package.json package.json
 RUN pnpm i
 
 COPY . .
+
 EXPOSE 3000
-CMD ["pnpm", "run", "dev"]
+
+CMD pnpm run dev:host
+# CMD pnpm run start:host
+# CMD ["pnpm", "run", "dev"]
 # CMD pnpm run dev

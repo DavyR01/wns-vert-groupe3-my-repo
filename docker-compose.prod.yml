@@ -1,6 +1,9 @@
 services:
   backend:
-    image: davyrobert/wns-vert-wildrent-back
+   #  image: davyrobert/wns-vert-wildrent-back
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     ports:
       - 4000:4000
     volumes:
@@ -16,7 +19,10 @@ services:
         condition: service_healthy
 
   frontend:
-    image: davyrobert/wns-vert-wildrent-front
+   #  image: davyrobert/wns-vert-wildrent-front
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     # restart: always
     environment:
       - NODE_ENV=development

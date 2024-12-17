@@ -36,12 +36,12 @@ jobs:
         with:
           push: true
           context: "{{defaultContext}}:frontend"
-          file: "Dockerfile.prod"
+          file: "Dockerfile"
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/wns-vert-wildrent-front:latest
       - name: 🗂 Build and push backend
         uses: docker/build-push-action@v4
         with:
           push: true
           context: "{{defaultContext}}:backend"
-          file: "Dockerfile.prod"
+          file: "Dockerfile"
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/wns-vert-wildrent-back:latest

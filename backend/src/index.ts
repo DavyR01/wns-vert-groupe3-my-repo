@@ -55,7 +55,7 @@ const start = async () => {
      },
   });
 
-  const server = new ApolloServer({ schema,});
+  const server = new ApolloServer({ schema, csrfPrevention: false});
   const { url } = await startStandaloneServer(server, {
     listen: { port: 4000 },
 

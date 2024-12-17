@@ -11,5 +11,7 @@ COPY package.json package.json
 
 RUN pnpm i
 
+EXPOSE 4000
+
 COPY . .
 CMD pnpm start

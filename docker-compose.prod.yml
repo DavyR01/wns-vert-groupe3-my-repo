@@ -1,8 +1,8 @@
 services:
   backend:
     image: davyrobert/wns-vert-wildrent-back
-    # ports:
-    #   - 4000:4000
+    ports:
+      - 4000:4000
     volumes:
       - ./backend/src:/app/src
     healthcheck:
@@ -23,10 +23,12 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
     # env_file: .env.dev
-    # ports:
-    #   - 3000:3000
+    ports:
+      - 3000:3000
     volumes:
       - ./frontend/src:/app/src
+    tty: true
+    stdin_open: true
     depends_on:
       backend:
         condition: service_healthy

@@ -2,7 +2,6 @@ ARG NODE_VERSION=20.11.0
 
 FROM node:${NODE_VERSION}-alpine as base
 
-
 # RUN apk --no-cache add curl
 RUN apk add --no-cache libc6-compat curl
 RUN corepack enable pnpm
@@ -14,4 +13,6 @@ COPY package.json package.json
 RUN pnpm i
 
 COPY . .
-CMD pnpm dev
+EXPOSE 3000
+CMD ["pnpm", "run", "dev"]
+# CMD pnpm run dev
